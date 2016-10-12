@@ -1,0 +1,11 @@
+.tmp
+
+coverage
+node_modules
+bower_components
+dist
+dist.zip
+.vagrant
+
+app/src/generated
+app/images/generated
