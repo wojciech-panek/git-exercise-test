@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import envConfig from 'env-config';
 import {Newsletter} from './newsletter/newsletter.component';
-
+import {List} from './list/list.component';
 
 export class Home extends Component {
   componentWillMount() {
@@ -34,9 +34,9 @@ export class Home extends Component {
             anim id est laborum.
           </div>
         </section>
-
         <section className="home__section">
           <Newsletter/>
+          <List/>
         </section>
       </div>
     );
