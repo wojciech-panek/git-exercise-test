@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
+import envConfig from 'env-config';
+import {Newsletter} from './newsletter/newsletter.component';
+import {List} from './list/list.component';
 
 export class Home extends Component {
+  componentWillMount() {
+    fetch(`http://myapi?privateKey=${envConfig.privateKey}`)
+  }
+
   render() {
     return (
       <div className="home">
@@ -26,6 +33,10 @@ export class Home extends Component {
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </div>
+        </section>
+        <section className="home__section">
+          <Newsletter/>
+          <List/>
         </section>
       </div>
     );
